@@ -1,0 +1,23 @@
+{
+  "name": "remainder-time-formater",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangpengfeido/remainder-time-formater.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wangpengfeido/remainder-time-formater/issues"
+  },
+  "homepage": "https://github.com/wangpengfeido/remainder-time-formater#readme",
+  "devDependencies": {
+    "eslint-loader": "^2.2.1",
+    "webpack": "^4.36.1"
+  }
+}

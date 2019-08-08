@@ -1,5 +1,5 @@
 module.exports = {
   entry: {
-    'remainder-time-formater':''
+    'remainder-time-formatter':''
   },
 };

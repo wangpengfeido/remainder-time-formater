@@ -1,5 +1,5 @@
 {
-  "name": "remainder-time-formater",
+  "name": "remainder-time-formatter",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wangpengfeido/remainder-time-formater.git"
+    "url": "git+https://github.com/wangpengfeido/remainder-time-formatter.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wangpengfeido/remainder-time-formater/issues"
+    "url": "https://github.com/wangpengfeido/remainder-time-formatter/issues"
   },
-  "homepage": "https://github.com/wangpengfeido/remainder-time-formater#readme",
+  "homepage": "https://github.com/wangpengfeido/remainder-time-formatter#readme",
   "devDependencies": {
     "eslint-loader": "^2.2.1",
     "webpack": "^4.36.1"

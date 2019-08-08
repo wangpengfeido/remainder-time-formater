@@ -1,1 +1,1 @@
-# remainder-time-formater
+# remainder-time-formatter

@@ -3,10 +3,10 @@
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
-	else if(typeof exports === 'object')
-		exports["RemainderTimeFormatter"] = factory();
-	else
-		root["RemainderTimeFormatter"] = factory();
+	else {
+		var a = factory();
+		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+	}
 })(window, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -91,20 +91,20 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/remainder-time-formatter.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/remainder-time-formatter.ts");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/remainder-time-formatter.js":
+/***/ "./src/remainder-time-formatter.ts":
 /*!*****************************************!*\
-  !*** ./src/remainder-time-formatter.js ***!
+  !*** ./src/remainder-time-formatter.ts ***!
   \*****************************************/
-/*! exports provided: a */
+/*! exports provided: RemainderTimeFormatter */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"a\", function() { return a; });\nconsole.log('aaa');\nvar a = 10;\n\n//# sourceURL=webpack://RemainderTimeFormatter/./src/remainder-time-formatter.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"RemainderTimeFormatter\", function() { return RemainderTimeFormatter; });\n/**\r\n * the configuration fragment item.\r\n */\nclass RemainderTimeFormatter {\n  /**\r\n   * @param {Date} date the date to calculate\r\n   * @param  {Date} relativeDate the relative date to contrast\r\n   * @param {ConfigItem[]} config the segmented configuration to set the start of the time range(ms),the end of the time range(ms),template or render function\r\n   */\n  constructor({\n    date,\n    relativeDate,\n    config\n  }) {\n    this.date = date;\n    this.relativeDate = relativeDate;\n    this.config = config.map(item => {\n      return {\n        timeStart: item.timeStart,\n        timeEnd: item.timeEnd,\n        template: item.template,\n        render: item.render\n      };\n    }).sort((a, b) => {\n      if (a.timeStart !== b.timeStart) {\n        return a.timeStart - b.timeStart;\n      }\n    });\n    this.timeInterval = this.relativeDate.getTime() - this.date.getTime();\n  }\n\n  get YYYY() {}\n\n  getResult() {}\n\n}\n\n//# sourceURL=webpack:///./src/remainder-time-formatter.ts?");
 
 /***/ })
 

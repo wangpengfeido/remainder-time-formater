@@ -19,7 +19,7 @@ export class RemainderTimeFormatter {
    * @param  {Date} relativeDate the relative date to contrast
    * @param {ConfigItem[]} config the segmented configuration to set the start of the time range(ms),the end of the time range(ms),template or render function
    */
-  private constructor({ date, relativeDate, config }: { date: Date; relativeDate: Date; config?: ConfigItem[] }) {
+  private constructor({date, relativeDate, config}: { date: Date; relativeDate: Date; config?: ConfigItem[] }) {
     this.date = date;
     this.relativeDate = relativeDate;
     this.config = config.map(item => {
@@ -38,8 +38,8 @@ export class RemainderTimeFormatter {
     this.timeInterval = this.relativeDate.getTime() - this.date.getTime();
   }
 
-  public get YYYY() {
-
+  private get YYYY(): string {
+    return this.date.getFullYear().toString();
   }
 
   public getResult() {

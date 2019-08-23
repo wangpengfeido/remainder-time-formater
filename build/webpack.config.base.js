@@ -7,6 +7,9 @@ module.exports = {
     path: path.resolve(__dirname, '../dist'),
     libraryTarget: 'umd',
   },
+  resolve: {
+    extensions: ['.ts', '.js']
+  },
   module: {
     rules: [
       {

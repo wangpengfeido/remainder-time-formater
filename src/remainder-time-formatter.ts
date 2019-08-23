@@ -1,3 +1,5 @@
+import {fillLeftByZero} from "./util";
+
 /**
  * the configuration fragment item.
  */
@@ -38,8 +40,44 @@ export class RemainderTimeFormatter {
     this.timeInterval = this.relativeDate.getTime() - this.date.getTime();
   }
 
-  private get YYYY(): string {
+  public get Y(): string {
     return this.date.getFullYear().toString();
+  }
+
+  public get YYYY(): string {
+    return fillLeftByZero(this.Y, 4);
+  }
+
+  public get M(): string {
+    return (this.date.getMonth() + 1).toString();
+  }
+
+  public get MM(): string {
+    return fillLeftByZero(this.M, 2);
+  }
+
+  public get D(): string {
+    return this.date.getDate().toString();
+  }
+
+  public get DD(): string {
+    return fillLeftByZero(this.D, 2);
+  }
+
+  public get H(): string {
+    return this.date.getHours().toString();
+  }
+
+  public get HH(): string {
+    return fillLeftByZero(this.H, 2);
+  }
+
+  public get m(): string {
+    return this.date.getMinutes().toString();
+  }
+
+  public get mm(): string {
+    return
   }
 
   public getResult() {

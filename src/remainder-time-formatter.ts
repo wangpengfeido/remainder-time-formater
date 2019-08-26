@@ -1,4 +1,4 @@
-import {fillLeftByZero} from "./util";
+import { fillLeftByZero } from "./util";
 
 /**
  * the configuration fragment item.
@@ -21,7 +21,7 @@ export class RemainderTimeFormatter {
    * @param  {Date} relativeDate the relative date to contrast
    * @param {ConfigItem[]} config the segmented configuration to set the start of the time range(ms),the end of the time range(ms),template or render function
    */
-  private constructor({date, relativeDate, config}: { date: Date; relativeDate: Date; config?: ConfigItem[] }) {
+  private constructor({ date, relativeDate = new Date(), config }: { date: Date; relativeDate: Date; config?: ConfigItem[] }) {
     this.date = date;
     this.relativeDate = relativeDate;
     this.config = config.map(item => {
@@ -77,8 +77,33 @@ export class RemainderTimeFormatter {
   }
 
   public get mm(): string {
-    return
+    return fillLeftByZero(this.m, 2);
   }
+
+  public get s(): string {
+    return this.date.getSeconds().toString();
+  }
+
+  public get ss(): string {
+    return fillLeftByZero(this.s, 2);
+  }
+
+  public get ms(): string {
+    return this.date.getMilliseconds().toString();
+  }
+
+  public get msms(): string {
+    return fillLeftByZero(this.ms, 4);
+  }
+
+  public setDate(date: Date) {
+    this.date = date;
+  }
+
+  public setRelativeDate(relativeDate: Date = new Date) {
+    this.relativeDate = relativeDate
+  }
+
 
   public getResult() {
 

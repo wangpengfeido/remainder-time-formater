@@ -1,6 +1,6 @@
 {
   "name": "remainder-time-formatter",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -26,11 +26,11 @@
     "babel-loader": "^8.0.6",
     "eslint": "^6.1.0",
     "eslint-loader": "^2.2.1",
+	"typescript": "^3.5.3"
     "webpack": "^4.36.1",
     "webpack-cli": "^3.3.6",
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "typescript": "^3.5.3"
   }
 }

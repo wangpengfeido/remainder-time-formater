@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/wangpengfeido/remainder-time-formatter#readme",
   "devDependencies": {
-    "eslint-loader": "^2.2.1",
-    "webpack": "^4.36.1"
+    "eslint-loader": "^4.0.2",
+    "webpack": "^5.75.0"
   }
 }
